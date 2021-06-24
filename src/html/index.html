@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>TimeBaby</title>
+        <link rel="stylesheet" href="../css/index.css" />
+        <script src="../scripts/renderRequest.js"></script>
+        <style>
+            .button2:hover {
+    background-color: #03fd0b; /* Green */
+    color: white;
+}
+.button2:active {
+    transform: translateY(4px);
+}
+
+.button:active {
+    transform: translateY(4px);
+}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div style="display: flex; justify-content: center">
+                <h1 style="color: red">Settings</h1>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Time Format</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="radio"
+                            name="tFormat"
+                            id="twentyFour"
+                            value="false"
+                        />
+                        <label id="label" class="labels" for="twentyFour"
+                            >Twenty Four</label
+                        >
+                        <input
+                            type="radio"
+                            name="tFormat"
+                            id="twele"
+                            value="true"
+                            checked="true"
+                        />
+                        <label id="label" class="labels" for="twele"
+                            >Twelve</label
+                        >
+                        <p style="color: aliceblue">
+                            (will be updated within 30 seconds)
+                        </p>
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Date Required</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="radio"
+                            name="dRequired"
+                            id="dRequiredYes"
+                            value="true"
+                            checked="true"
+                        />
+                        <label id="label" class="labels" for="dRequiredYes"
+                            >Yes</label
+                        >
+                        <input
+                            type="radio"
+                            name="dRequired"
+                            id="dRequiredNo"
+                            value="false"
+                        />
+                        <label id="label" class="labels" for="dRequiredNo"
+                            >No</label
+                        >
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Position</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="radio"
+                            name="position"
+                            id="LT"
+                            value="LT"
+                        />
+                        <label id="label" class="labels" for="LT"
+                            >Left Top</label
+                        >
+                        <input
+                            type="radio"
+                            name="position"
+                            id="LB"
+                            value="LB"
+                        />
+                        <label id="label" class="labels" for="LB"
+                            >Left Bottom</label
+                        >
+                        <input
+                            type="radio"
+                            name="position"
+                            id="RT"
+                            value="RT"
+                        />
+                        <label id="label" class="labels" for="RT"
+                            >Right Top</label
+                        >
+                        <input
+                            type="radio"
+                            name="position"
+                            id="RB"
+                            value="RB"
+                        />
+                        <label id="label" class="labels" for="RB"
+                            >Right Bottom</label
+                        >
+                        <input
+                            type="radio"
+                            name="position"
+                            id="C"
+                            value="C"
+                            checked="true"
+                        />
+                        <label id="label" class="labels" for="C">Center</label>
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Font Color For Time</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input type="color" name="fontColorTime" id="fColor" />
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Font Color For Date</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="color"
+                            name="fontColorDate"
+                            id="fColorDate"
+                        />
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Font Size For Time</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="number"
+                            name="FontSizeTime"
+                            id="FontSizeTime"
+                            style="width: 40px"
+                            max="200"
+                            value="150"
+                            min="0"
+                        />
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Font Size For Date</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="number"
+                            name="FontSizeDate"
+                            id="FontSizeDate"
+                            style="width: 40px"
+                            max="200"
+                            value="100"
+                            min="0"
+                        />
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Font Family Time</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="radio"
+                            name="fFamilyTime"
+                            id="Arial"
+                            value="Arial"
+                            checked="true"
+                        />
+                        <label id="label" class="labels" for="Arial"
+                            >Arial</label
+                        >
+                        <input
+                            type="radio"
+                            name="fFamilyTime"
+                            id="TimesNewRoman"
+                            value="Times New Roman"
+                        />
+                        <label id="label" class="labels" for="TimesNewRoman"
+                            >Times New Roman</label
+                        >
+                        <input
+                            type="radio"
+                            name="fFamilyTime"
+                            id="Rockwell"
+                            value="Rockwell"
+                        />
+                        <label id="label" class="labels" for="Rockwell"
+                            >Rockwell</label
+                        >
+                        <input
+                            type="radio"
+                            name="fFamilyTime"
+                            id="LucidaConsole"
+                            value="Lucida Console"
+                        />
+                        <label id="label" class="labels" for="LucidaConsole"
+                            >Lucida Console</label
+                        >
+                        <input
+                            type="radio"
+                            name="fFamilyTime"
+                            id="Impact"
+                            value="Impact"
+                        />
+                        <label id="label" class="labels" for="Impact"
+                            >Impact</label
+                        >
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Font Family Date</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="radio"
+                            name="fFamilyDate"
+                            id="ArialD"
+                            value="Arial"
+                            checked="true"
+                        />
+                        <label id="label" class="labels" for="ArialD"
+                            >Arial</label
+                        >
+                        <input
+                            type="radio"
+                            name="fFamilyDate"
+                            id="TimesNewRomanD"
+                            value="Times New Roman"
+                        />
+                        <label id="label" class="labels" for="TimesNewRomanD"
+                            >Times New Roman</label
+                        >
+                        <input
+                            type="radio"
+                            name="fFamilyDate"
+                            id="RockwellD"
+                            value="Rockwell"
+                        />
+                        <label id="label" class="labels" for="RockwellD"
+                            >Rockwell</label
+                        >
+                        <input
+                            type="radio"
+                            name="fFamilyDate"
+                            id="LucidaConsoleD"
+                            value="Lucida Console"
+                        />
+                        <label id="label" class="labels" for="LucidaConsoleD"
+                            >Lucida Console</label
+                        >
+                        <input
+                            type="radio"
+                            name="fFamilyDate"
+                            id="ImpactD"
+                            value="Impact"
+                        />
+                        <label id="label" class="labels" for="ImpactD"
+                            >Impact</label
+                        >
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Font Weight Time</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="number"
+                            name="FontWeightTime"
+                            id="FontWeightTime"
+                            style="width: 40px"
+                            max="900"
+                            value="100"
+                            step="100"
+                            min="100"
+                        />
+                    </dd>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="legend">
+                        <dt>
+                            <h1 class="settingHeaders">Font Weight Date</h1>
+                        </dt>
+                    </legend>
+                    <dd>
+                        <input
+                            type="number"
+                            name="FontWeightDate"
+                            id="FontWeightDate"
+                            style="width: 40px"
+                            max="900"
+                            value="100"
+                            step="100"
+                            min="100"
+                        />
+                    </dd>
+                </fieldset>
+            </div>
+            <div style="display: flex; justify-content: center; padding: 1%">
+                <button
+                    class="button"
+                    onclick="gatherData()"
+                    style="margin-right: 1%"
+                >
+                    Apply
+                </button>
+                <button class="button" onclick="resetData()">Reset</button>
+            </div>
+            <audio src="./../assets/mixkit-game-click-1114.wav" id="manoj"></audio>
+            <audio src="./../assets/mixkit-game-click-1114.wav" id="tejas"></audio>
+        </div>
+    </body>
+</html>
