@@ -1,6 +1,6 @@
 # clock-with-electron-framework
 <h3>A simple widget looking like clock which display time and date, with many customization options.</h3>
-<br>
+<br><p>Automatically starts on windows boot</p>
 <p>Link for installer --> https://drive.google.com/file/d/19AyPdxAKDhFyI7oGd0N3a-xRjTcsKMW-/view?usp=sharing</p>
 <h4>Sample image</h4>
 <img src="https://user-images.githubusercontent.com/71129867/129483061-4300a3eb-7457-4aeb-a27f-dfb09b8f11fc.png" width = "1000"/>
